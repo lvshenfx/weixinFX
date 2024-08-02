@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>吕申计算器</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="#" />
+  <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+<div class="container-fluid">
+	<div class="container p-1 mb-2" style="background-color:#f1f5f8;border-radius: 40px ;">
+		<div class="container p-1 my-2" style="background-color:#fff;border-radius: 30px ;">
+		<div class="container p-1 my-2 bg-light text-dark" style="border-radius: 30px ;">
+
+		  <!-- Nav pills -->
+		  <ul class="nav nav-pills nav-justified" role="tablist" style="background-color:#e0e6ea;border-radius: 10px;margin-top: 10px;">
+			<li class="nav-item">
+			  <a class="nav-link active" style="font-weight: 600;padding: 15px 15px;" href="https://lvshenfx.pythonanywhere.com/1">上涨阻力</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" style="color: #000000;font-weight: 600;padding: 15px 15px;" href="https://lvshenfx.pythonanywhere.com/2">下跌支撑</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" style="color: #000000;font-weight: 600;padding: 15px 15px;" href="https://lvshenfx.pythonanywhere.com/3">周期转折</a>
+			</li>
+		  </ul>
+
+		  <!-- Tab panes -->
+		<div class="container" style="text-align:center;">
+			  <table class="table table-hover">
+				  <form method="post">
+					  <div class="mb-3 mt-3">
+						<input type="number" class="form-control" placeholder="区间(或单根)K线的最高价:" style="text-align:center; width:100%" center name="zuligao" min="1" max="9999999999" value="{{ my_zuli_gao }}" >
+					  </div>
+					  <div class="mb-3 mt-3">
+						<input type="number" class="form-control" placeholder="区间(或单根)K线的最低价:" style="text-align:center; width:100%" center name="zulidi" min="1" max="9999999999" value="{{ my_zuli_di }}" >
+					  </div>
+
+				<tbody>
+				  <tr>
+					<td><input type="submit" style="background: #027aff;color: #fff;padding: 5px 14px;border-radius: 10px;border: none;" value="计算阻力价" center name="jisuanzuli"></td>
+					<td><input type="submit" style="background: #027aff;color: #fff;padding: 5px 14px;border-radius: 10px;border: none;" value="重新计算" center name="chongxinzuli"></td>
+				  </tr>
+				  </form>
+				  <tr>
+					<td>阻力价一:</td>
+					<td>{{ my_zuli_1 }}</td>
+				  </tr>
+				  <tr>
+					<td>阻力价二:</td>
+					<td>{{ my_zuli_2 }}</td>
+				  </tr>
+				  <tr>
+					<td>阻力价三:</td>
+					<td>{{ my_zuli_3 }}</td>
+				  </tr>
+				  <tr>
+					<td>阻力价四:</td>
+					<td>{{ my_zuli_4 }}</td>
+				  </tr>
+				  <tr>
+					<td>阻力价五:</td>
+					<td>{{ my_zuli_5 }}</td>
+				  </tr>
+				  <tr>
+					<td>阻力价六:</td>
+					<td>{{ my_zuli_6 }}</td>
+				  </tr>
+				  <tr>
+					<td>阻力价七:</td>
+					<td>{{ my_zuli_7 }}</td>
+				  </tr>
+				  <tr>
+					<td>阻力价八:</td>
+					<td>{{ my_zuli_8 }}</td>
+				  </tr>
+				  <tr>
+					<td>阻力价九:</td>
+					<td>{{ my_zuli_9 }}</td>
+				  </tr>
+				  <tr>
+					<td>阻力价十:</td>
+					<td>{{ my_zuli_10 }}</td>
+				  </tr>
+				</tbody>
+			  </table>
+		</div>
+		<div class="container mt-3"  style="text-align:center;margin-bottom: 16px;">
+		  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="width:100%">
+			吕申预测
+		  </button>
+		</div>
+
+		<!-- 模态框 -->
+		<div class="modal" id="myModal">
+		  <div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content"  style="text-align:center;">
+
+			  <!-- 模态框内容 -->
+			  <div class="modal-body">
+				<img decoding="async" src="https://lvshenfx.com/1658217413914.jpg" class="align-self-start mr-3" style="width:150px">
+			  </div>
+
+
+			</div>
+		  </div>
+		</div>
+		</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
